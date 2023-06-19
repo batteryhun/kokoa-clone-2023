@@ -1,3 +1,3 @@
 # Kokoa Clone Challenge 2023
 
-2023.6.19 Kokoa Clone Start!
+It's one small step for programmers, One giant leap for Me.
