@@ -1,0 +1,128 @@
+#chat-screen {
+  background-color: #abc1d1;
+  height: 300vh;
+}
+#chat-screen .alt-header {
+  position: sticky;
+  top: 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  background-color: #abc1d1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.main-chat {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s linear;
+}
+.chat-room__time {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: rgba(256, 256, 256, 0.65);
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.message__author {
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 8px;
+  display: block;
+}
+.message__info {
+  display: flex;
+  align-items: end;
+}
+.messgae__bubble {
+  padding: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  background-color: white;
+}
+.message__time {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0px 8px;
+}
+.message-row--own {
+  justify-content: end;
+}
+.message-row--own .messgae__bubble {
+  background-color: var(--yellow);
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+}
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  box-sizing: border-box;
+}
+.reply__column {
+  display: flex;
+  align-items: center;
+}
+
+.reply__column i {
+  font-size: 20px;
+}
+
+.reply__column:last-child {
+  width: 95%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 0px 1px;
+  box-sizing: border-box;
+}
+
+.reply__column:last-child i:last-child {
+  padding: 5px 7px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  margin: 1px 0px 1px 15px;
+}
+
+.reply__column input {
+  border: none;
+  background-color: transparent;
+  height: 30px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.reply:focus-within .reply__column:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
