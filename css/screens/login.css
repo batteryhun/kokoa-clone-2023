@@ -1,9 +1,12 @@
 .welcome-header {
-  margin: 90px 0px;
+  margin: 80px 0px 50px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.welcome-header__img {
+  margin-bottom: 40px;
 }
 .welcome-header__title {
   font-size: 30px;
